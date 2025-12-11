@@ -3,35 +3,39 @@ let boardArr = []
 let black = []
 let white = []
 
-let blackRook = new Image()
-blackRook.style.width = "50px"
-blackRook.style.height = "50px"
-blackRook.src = "../img/blackRook.png"
+function IMG(url) {
+    this.img = document.createElement("img")
+    this.img.style.width = "50px"
+    this.img.style.height = "50px"
+    this.img.src = url
+}
+//black PNG
+let blackRook = new IMG("../img/blackRook.png")
+let blackKnight = new IMG("../img/blackknight.png")
+let blackBishop = new IMG("../img/blackBishop.png")
+let blackKing = new IMG("../img/blackKing.png")
+let blackQueen = new IMG("../img/blackQueen.png")
+let blackRook2 = new IMG("../img/blackRook.png")
+let blackKnight2 =  new IMG("../img/blackknight.png")
+let blackBishop2 =  new IMG("../img/blackBishop.png")
 
+//white PNG
+let whiteRook = new IMG("../img/whiteRook.png")
+let whiteKnight = new IMG("../img/whiteKnight.png")
+let whiteBishop = new IMG("../img/whiteBishop.png")
+let whiteKing = new IMG("../img/whiteKing.png")
+let whiteQueen = new IMG("../img/whiteQueen.png")
+let whiteRook2 = new IMG("../img/whiteRook.png")
+let whiteKnight2= new IMG("../img/whiteKnight.png")
+let whiteBishop2 = new IMG("../img/whiteBishop.png")
 
-let blackKnight = new Image()
-blackKnight.style.width = "50px"
-blackKnight.style.height = "50px"
-blackKnight.src = "../img/blackknight.png"
+//-------
 
+let whitePlayersIcons = [whiteRook, whiteKnight, whiteBishop, whiteQueen, whiteKing, whiteBishop2, whiteKnight2, whiteRook2]
+let blackPlayersIcons = [blackRook, blackKnight, blackBishop, blackQueen, blackKing, blackBishop2, blackKnight2, blackRook2]
 
-let blackBishop = new Image()
-blackBishop.style.width = "50px"
-blackBishop.style.height = "50px"
-blackBishop.src = "../img/blackBishop.png"
+console.log(blackPlayersIcons);
 
-let blackKing = new Image()
-blackKing.style.width = "50px"
-blackKing.style.height = "50px"
-blackKing.src =  "../img/blackKing.png"
-
-let blackQueen = new Image()
-blackQueen.style.width = "50px"
-blackQueen.style.height = "50px"
-blackQueen.src =  "../img/blackQueen.png"
-
-let whitePlayersIcons = ["♖", "♘", "♗", "♕", "♔", "♗", "♘", "♖"]
-let blackPlayersIcons = [blackRook, blackKnight, blackBishop, blackQueen, blackKing, blackBishop, blackKnight, blackRook]
 
 
 let blackSolider = []
@@ -57,7 +61,6 @@ for (let i = 0; i < boardArr.length; i++) {
 
 
 // black
-
 for (let i = 0; i < black.length; i++) {
     if (i < 8) {
         blackPlayers.push(black[i])
@@ -74,8 +77,9 @@ for (let i = 0; i < blackSolider.length; i++) {
     blackSolider[i].appendChild(blackSoliderIcon)
 }
 
+
 for (let i = 0; i < blackPlayersIcons.length; i++) {
-    blackPlayers[i].appendChild(blackPlayersIcons[i])
+    blackPlayers[i].appendChild(blackPlayersIcons[i].img)
 }
 
 
@@ -98,5 +102,5 @@ for (let i = 0; i < whiteSolider.length; i++) {
 }
 
 for (let i = 0; i < whitePlayersIcons.length; i++) {
-    whitePlayers[i].innerText = whitePlayersIcons[i]
+    whitePlayers[i].appendChild( whitePlayersIcons[i].img)
 }
