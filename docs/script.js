@@ -5,8 +5,8 @@ let white = []
 
 function IMG(url) {
     this.img = document.createElement("img")
-    this.img.style.width = "50px"
-    this.img.style.height = "50px"
+    this.img.style.width = "30px"
+    this.img.style.height = "30px"
     this.img.src = url
 }
 //black PNG
@@ -72,8 +72,8 @@ for (let i = 0; i < black.length; i++) {
 for (let i = 0; i < blackSolider.length; i++) {
     let blackSoliderIcon = new Image()
     blackSoliderIcon.src = "../img/blackSolider.png"
-    blackSoliderIcon.style.width = "35px"
-    blackSoliderIcon.style.height = "40px"
+    blackSoliderIcon.style.width = "30px"
+    blackSoliderIcon.style.height = "30px"
     blackSolider[i].appendChild(blackSoliderIcon)
 }
 
@@ -96,8 +96,8 @@ for (let i = 0; i < white.length; i++) {
 for (let i = 0; i < whiteSolider.length; i++) {
     let whiteSoliderIcon = new Image()
     whiteSoliderIcon.src = "../img/whiteSolider.png"
-    whiteSoliderIcon.style.width = "35px"
-    whiteSoliderIcon.style.height = "50px"
+    whiteSoliderIcon.style.width = "30px"
+    whiteSoliderIcon.style.height = "30px"
     whiteSolider[i].appendChild(whiteSoliderIcon)
 }
 

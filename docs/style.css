@@ -6,7 +6,7 @@
 }
 
 body {
-    background-image: url("../img/gameBackground.jpg");
+    background-image: url("../img/gameBacground.jpg");
     background-size: cover;
 }
 
@@ -20,8 +20,8 @@ body {
 }
 
 .main {
-    width: 600px;
-    height: 600px;
+    width: 650px;
+    height: 650px;
     background-color: rgb(5, 60, 5);
     display: flex;
     justify-content: center;
@@ -31,7 +31,7 @@ body {
 .symbols {
     font-weight: 700;
     position: absolute;
-    bottom: 204px;
+    bottom: 180px;
     display: flex;
     gap: 60px;
     color: white;
@@ -39,21 +39,18 @@ body {
 
 .numbers {
     font-weight: 700;
-    position: absolute;
-    top: 254px;
-    left: 661px;
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 49px;
     color: white;
 }
 
 .board {
-    width: 550px;
-    height: 550px;
+    width: 600px;
+    height: 600px;
     border: 1px solid;
     display: grid;
-    grid-template-columns: auto auto auto auto auto auto auto auto;
+    grid-template-columns:  auto auto auto auto auto auto auto auto; 
 }
 
 .squares {
