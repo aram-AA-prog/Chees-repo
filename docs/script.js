@@ -2,8 +2,36 @@ let board = document.querySelector(".board")
 let boardArr = []
 let black = []
 let white = []
-let whitePlayersIcons = ["♖","♘","♗","♕","♔","♗","♘","♖"]
-let blackPlayersIcons = ["♜","♞","♝","♛","♚","♝","♞","♜"]
+
+let blackRook = new Image()
+blackRook.style.width = "50px"
+blackRook.style.height = "50px"
+blackRook.src = "../img/blackRook.png"
+
+
+let blackKnight = new Image()
+blackKnight.style.width = "50px"
+blackKnight.style.height = "50px"
+blackKnight.src = "../img/blackknight.png"
+
+
+let blackBishop = new Image()
+blackBishop.style.width = "50px"
+blackBishop.style.height = "50px"
+blackBishop.src = "../img/blackBishop.png"
+
+let blackKing = new Image()
+blackKing.style.width = "50px"
+blackKing.style.height = "50px"
+blackKing.src =  "../img/blackKing.png"
+
+let blackQueen = new Image()
+blackQueen.style.width = "50px"
+blackQueen.style.height = "50px"
+blackQueen.src =  "../img/blackQueen.png"
+
+let whitePlayersIcons = ["♖", "♘", "♗", "♕", "♔", "♗", "♘", "♖"]
+let blackPlayersIcons = [blackRook, blackKnight, blackBishop, blackQueen, blackKing, blackBishop, blackKnight, blackRook]
 
 
 let blackSolider = []
@@ -39,11 +67,15 @@ for (let i = 0; i < black.length; i++) {
 }
 
 for (let i = 0; i < blackSolider.length; i++) {
-    blackSolider[i].innerText = "♟️"
+    let blackSoliderIcon = new Image()
+    blackSoliderIcon.src = "../img/blackSolider.png"
+    blackSoliderIcon.style.width = "35px"
+    blackSoliderIcon.style.height = "40px"
+    blackSolider[i].appendChild(blackSoliderIcon)
 }
 
-for(let i = 0; i < blackPlayersIcons.length; i++){
-    blackPlayers[i].innerText = blackPlayersIcons[i]
+for (let i = 0; i < blackPlayersIcons.length; i++) {
+    blackPlayers[i].appendChild(blackPlayersIcons[i])
 }
 
 
@@ -57,10 +89,14 @@ for (let i = 0; i < white.length; i++) {
     }
 }
 
-for(let i = 0; i < whiteSolider.length; i++){
-    whiteSolider[i].innerText = "♙"
+for (let i = 0; i < whiteSolider.length; i++) {
+    let whiteSoliderIcon = new Image()
+    whiteSoliderIcon.src = "../img/whiteSolider.png"
+    whiteSoliderIcon.style.width = "35px"
+    whiteSoliderIcon.style.height = "50px"
+    whiteSolider[i].appendChild(whiteSoliderIcon)
 }
 
-for(let i = 0; i < whitePlayersIcons.length; i++){
+for (let i = 0; i < whitePlayersIcons.length; i++) {
     whitePlayers[i].innerText = whitePlayersIcons[i]
 }
